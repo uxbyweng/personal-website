@@ -1,2 +1,7 @@
 node_modules
 .DS_Store
+
+/assets/live-preview-1.png
+/assets/live-preview-2.png
+/assets/wireframe-desktop.png
+/assets/wireframe-mobile.png
