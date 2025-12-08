@@ -19,16 +19,20 @@
     --link-color-light: #fff;
     --link-color-dark: #000;
     --accent-color: #d72b00;
-    --font-family: Arial, sans-serif;
+    --text-font-family: Arial, sans-serif;
+    --headline-font-family: Lucida, sans-serif;
+}
+
+html {
+    font-size: 62.5%; /* 1rem = 10px */
 }
 
 body {
     background: var(--background-color);
     color: var(--text-color);
-    font-family: var(--font-family);
-    font-size: 14px;
+    font-family: var(--text-font-family);
+    font-size: 1.4rem;
 }
-
 body:has(#darkmode:checked) {
     --background-color: var(--background-light);
     --text-color: var(--text-color-dark);
@@ -49,10 +53,32 @@ li {
 }
 
 h1 {
-    font-size: 30px;
-    line-height: 2;
+    font-family: var(--headline-font-family);
+    font-size: 5rem;
+    font-weight: 300;
+    line-height: 6rem;
 }
 
+.visually-hidden-focusable {
+    visibility: hidden;
+}
+/* .visually-hidden-focusable:focus,
+.visually-hidden-focusable:active {
+    position: static;
+    width: auto;
+    height: auto;
+    margin: 1rem;
+    padding: 0.5rem 1rem;
+    clip-path: none;
+    overflow: visible;
+    background: #005fcc;
+    color: white;
+    font-weight: 600;
+    border-radius: 4px;
+    text-decoration: none;
+} */
+
+/* HEADER  / NAVI */
 header {
     background-color: var(--header-bg-color);
     backdrop-filter: blur(10px);
@@ -66,6 +92,45 @@ header {
     display: flex;
     justify-content: space-between;
     align-items: center;
+}
+
+/* STAGE / HERO */
+.stage {
+    display: flex;
+}
+.stage__text {
+    font-size: 24px;
+}
+.stage__content {
+    padding: 0 30px 0 0;
+    width: 55%;
+}
+.stage__content h1 {
+    margin-bottom: 20px;
+}
+.stage__content span {
+    color: var(--accent-color);
+}
+.stage__image {
+    width: 45%;
+}
+.stage__headline {
+    font-family: var(--headline-font-family);
+    font-size: 48px;
+}
+
+.stage_image {
+    width: 45%;
+    height: 35rem; /* oder z. B. 300px oder 40vh */
+    overflow: hidden;
+}
+
+.stage_image img,
+.stage_image picture {
+    height: 100%;
+    width: 100%;
+    object-fit: cover;
+    display: block;
 }
 
 main {
