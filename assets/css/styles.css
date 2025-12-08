@@ -6,14 +6,12 @@
 
 /* Variablen */
 :root {
-    --background-color: #000; /* initial */
-    --background-dark: #000;
+    --background-color: #212529; /* initial */
+    --background-dark: #212529;
     --background-light: #ffffffcc;
-
     --header-bg-color: #1a1a1a99;
     --header-bg-dark: #1a1a1a99;
     --header-bg-light: #ffffffcc;
-
     --text-color: #fff; /* initial */
     --text-color-light: #fff;
     --text-color-dark: #000;
@@ -28,6 +26,7 @@ body {
     background: var(--background-color);
     color: var(--text-color);
     font-family: var(--font-family);
+    font-size: 14px;
 }
 
 body:has(#darkmode:checked) {
@@ -47,6 +46,11 @@ a:hover {
 }
 li {
     list-style: none;
+}
+
+h1 {
+    font-size: 30px;
+    line-height: 2;
 }
 
 header {
@@ -76,9 +80,15 @@ section {
 .navigation__menu {
     display: flex;
     justify-content: flex-end;
-    gap: 1rem;
+    gap: 1.2rem;
 }
 
 .navigation__link li {
     color: #fff;
+}
+.navigation__link--checkbox {
+    display: flex;
+}
+.navigation__link--checkbox input {
+    margin-left: 10px;
 }
